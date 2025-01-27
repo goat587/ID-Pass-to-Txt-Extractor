@@ -17,6 +17,9 @@ WORKDIR /app
 # Copy the Installer file (requirements.txt)
 COPY Installer /app/
 
+# Expose the port your application listens on
+EXPOSE 8080
+
 # Install Python dependencies
 RUN pip3 install --no-cache-dir --upgrade pip \
     && pip3 install --no-cache-dir --upgrade -r Installer
