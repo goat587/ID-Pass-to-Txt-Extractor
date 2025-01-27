@@ -18,7 +18,7 @@ WORKDIR /app
 COPY Installer /app/
 
 # Expose the port your application listens on
-EXPOSE 8080
+EXPOSE 5000
 
 # Install Python dependencies
 RUN pip3 install --no-cache-dir --upgrade pip \
