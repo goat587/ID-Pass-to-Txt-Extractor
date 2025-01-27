@@ -1,15 +1,4 @@
-# Install system dependencies
-RUN apt-get update -y && apt-get upgrade -y \
-    && apt-get install -y --no-install-recommends \
-        gcc \
-        libffi-dev \
-        ffmpeg \
-        aria2 \
-        python3-pip \
-        python3-dev \
-        python3-venv \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+
 
 # Create and activate a virtual environment
 RUN python3 -m venv /opt/venv
