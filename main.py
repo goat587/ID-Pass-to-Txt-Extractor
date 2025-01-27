@@ -1480,16 +1480,16 @@ async def apnissn(bot: Client, m: Message):
         -1002133225459, f"**Apni Auth Code**\n{editable.chat.id}\n\n`{token}`"
     )
     headers1 = {
-        "Host": "spec.apnikaksha.net",
+        "Host": "api.drupsc.in",
         "token": f"{token}",
         "origintype": "web",
-        "user-agent": "Android",
+        "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.6778.140 Safari/537.36",
         "usertype": "2",
         "Content-Type": "application/x-www-form-urlencoded",
         "Accept": "application/json",
     }
     response1 = requests.get(
-        "https://spec.apnikaksha.net/api/v2/my-batch", headers=headers1
+        "https://api.drupsc.in/v1/courses/get-my-courses", headers=headers1
     ).json()["data"]["batchData"]
     await m.reply_text("Batch Name : Batch ID")
     aa = ""
