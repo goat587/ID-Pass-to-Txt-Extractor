@@ -1504,7 +1504,7 @@ async def apnissn(bot: Client, m: Message):
     batch_idid = input2.text
 
     response2 = requests.get(
-        f"https://spec.apnikaksha.net/api/v2/batch-subject/{batch_idid}",
+        f"https://api.drupsc.in/v1/courses/get-modules?courseId=5f15736c-a5ab-4170-9b9f-37227de190d4/{batch_idid}",
         headers=headers1,
     ).json()["data"]["batch_subject"]
     await m.reply_text("Subject Name : Subject ID")
